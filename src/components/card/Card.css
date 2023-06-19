@@ -1,17 +1,23 @@
 .cards-area-container {
   height: 41rem;
   width: 25rem;
-  background-color: #f48b29;
+  background-color: #8c8c8c;
   margin: 0 auto;
   border-radius: 1rem;
   display: grid;
   grid-template-rows: 10% 90%;
   grid-template-areas: "yukarı" "aşağı";
+  overflow: hidden;
 }
 
 .bars {
   height: 41rem;
-  width: ;
+  width: 5rem;
+  background-color: #a6a6a6;
+  position: relative;
+  transform: rotate(-45deg);
+  top: -40rem;
+  left: 10rem;
 }
 
 .language-title {
