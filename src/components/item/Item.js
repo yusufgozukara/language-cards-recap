@@ -1,9 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Item.css";
 
 const Item = ({ card }) => {
   const [showLogo, setShowLogo] = useState(true);
   const { name, img, options } = card;
+
+  useEffect(() => {
+    if (!showLogo) {
+      const flipCard = setTimeout(() => {
+        setShowLogo(true);
+      }, 5000);
+      return () => clearTimeout(flipCard);
+    }
+  }, [showLogo]);
+
   return (
     <div className="card" onClick={() => setShowLogo(!showLogo)}>
       {showLogo ? (
